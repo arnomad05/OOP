@@ -49,8 +49,8 @@ public final class Dif {
             long medianNs = times[runs / 2];
 
             double ms = medianNs / 1_000_000.0;
-            double nLogN = n * (Math.log(n) / Math.log(2));
-            double nsPerUnit = medianNs / nLogN;
+            double logFactor = n * (Math.log(n) / Math.log(2));
+            double nsPerUnit = medianNs / logFactor;
 
             System.out.printf("%12d %15.2f %18.3f%n", n, ms, nsPerUnit);
         }
@@ -65,7 +65,9 @@ public final class Dif {
 
     private static boolean isSorted(int[] a) {
         for (int i = 1; i < a.length; i++) {
-            if (a[i - 1] > a[i]) return false;
+            if (a[i - 1] > a[i]) {
+                return false;
+            }
         }
         return true;
     }
