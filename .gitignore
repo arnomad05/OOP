@@ -1,0 +1,32 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# Компилированные классы и jar
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Логи
+*.log
+
+# ОС
+.DS_Store
+Thumbs.db
