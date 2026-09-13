@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.nsu.aimykhelov.Task_1_1_1.SortTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-13T11:25:03.286Z" hostname="DESKTOP-BJV5OMI" time="0.071">
+  <properties/>
+  <testcase name="alreadySorted()" classname="ru.nsu.aimykhelov.Task_1_1_1.SortTest" time="0.036"/>
+  <testcase name="emptyArray()" classname="ru.nsu.aimykhelov.Task_1_1_1.SortTest" time="0.008"/>
+  <testcase name="singleElement()" classname="ru.nsu.aimykhelov.Task_1_1_1.SortTest" time="0.001"/>
+  <testcase name="taskExample()" classname="ru.nsu.aimykhelov.Task_1_1_1.SortTest" time="0.001"/>
+  <testcase name="reverseSorted()" classname="ru.nsu.aimykhelov.Task_1_1_1.SortTest" time="0.001"/>
+  <testcase name="allEqual()" classname="ru.nsu.aimykhelov.Task_1_1_1.SortTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
