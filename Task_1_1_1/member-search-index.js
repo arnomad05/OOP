@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"ru.nsu.aimykhelov.task111","c":"Main","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"ru.nsu.aimykhelov.task111","c":"Sort","l":"sort(int[])"}];updateSearchResults();
+memberSearchIndex = [{"p":"ru.nsu.aimykhelov.task111","c":"Sort","l":"sort(int[])"}];updateSearchResults();
