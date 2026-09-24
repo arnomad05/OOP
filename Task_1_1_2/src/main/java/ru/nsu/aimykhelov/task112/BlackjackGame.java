@@ -49,15 +49,15 @@ class BlackjackGame {
         printPlayerHand();
         System.out.println("Карты дилера: " + dealer.describeWithHidden());
 
-        boolean playerBJ = player.getHand().isBlackjack();
-        boolean dealerBJ = dealer.getHand().isBlackjack();
+        boolean playerBlackJack = player.getHand().isBlackjack();
+        boolean dealerBlackJack = dealer.getHand().isBlackjack();
 
-        if (playerBJ || dealerBJ) {
+        if (playerBlackJack || dealerBlackJack) {
             printPlayerHand();
             System.out.println("Карты дилера: " + dealer.getHand().describe());
-            if (playerBJ && dealerBJ) {
+            if (playerBlackJack && dealerBlackJack) {
                 System.out.println("У обоих блэкджек! Ничья.");
-            } else if (playerBJ) {
+            } else if (playerBlackJack) {
                 playerWins++;
                 System.out.println("У вас блэкджек! Вы выиграли раунд!");
             } else {
@@ -123,7 +123,7 @@ class BlackjackGame {
         System.out.println("Ход дилера");
         System.out.println("-------");
 
-        Card hidden = dealer.getHand().getCards().getFirst();
+        Card hidden = dealer.getHand().getCards().get(0);
         System.out.println("Дилер открывает закрытую карту " + hidden.toString()
                 + " (" + hidden.getBaseValue() + ")");
         printPlayerHand();
@@ -168,6 +168,6 @@ class BlackjackGame {
     }
 
     public static void main(String[] args) {
-        new BlackjackGame(1).start();
+        new ru.nsu.aimykhelov.task112.BlackjackGame(1).start();
     }
 }
