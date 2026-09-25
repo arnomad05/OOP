@@ -14,10 +14,18 @@ public class BlackjackGame {
     private int playerWins = 0;
     private int dealerWins = 0;
 
+    /**
+     * Создаёт игру с заданным числом колод.
+     *
+     * @param deckCount количество колод в игре
+     */
     public BlackjackGame(int deckCount) {
         this.deck = new Deck(deckCount);
     }
 
+    /**
+     * Запускает основной цикл игры: раунды до отказа пользователя.
+     */
     public void start() {
         System.out.println("Добро пожаловать в Блэкджек!");
         int round = 1;
@@ -36,6 +44,10 @@ public class BlackjackGame {
         System.out.println("Спасибо за игру!");
     }
 
+    /**
+     * Проводит один раунд: раздачу, ход игрока, ход дилера
+     * и определение победителя.
+     */
     private void playRound() {
         player.resetHand();
         dealer.resetHand();
@@ -94,6 +106,10 @@ public class BlackjackGame {
         }
     }
 
+    /**
+     * Интерактивный ход игрока: взятие карт до остановки,
+     * перебора или достижения 21.
+     */
     private void playerTurn() {
         System.out.println();
         System.out.println("Ваш ход");
@@ -119,6 +135,10 @@ public class BlackjackGame {
         }
     }
 
+    /**
+     * Ход дилера: открытие закрытой карты и добор до 17.
+     * Каждая взятая карта выводится отдельно.
+     */
     private void dealerTurn() {
         System.out.println("Ход дилера");
         System.out.println("-------");
@@ -139,10 +159,18 @@ public class BlackjackGame {
         }
     }
 
+    /**
+     * Печатает руку игрока с суммой очков.
+     */
     private void printPlayerHand() {
         System.out.println("Ваши карты: " + player.getHand().describe());
     }
 
+    /**
+     * Читает целое число из консоли, повторяя запрос при ошибке.
+     *
+     * @return введённое целое число
+     */
     private int readInt() {
         while (true) {
             String line = scanner.nextLine().trim();
@@ -154,6 +182,11 @@ public class BlackjackGame {
         }
     }
 
+    /**
+     * Читает ответ «да/нет» (1/0) из консоли.
+     *
+     * @return {@code true} для 1, {@code false} для 0
+     */
     private boolean readYesNo() {
         while (true) {
             String line = scanner.nextLine().trim();
@@ -167,7 +200,12 @@ public class BlackjackGame {
         }
     }
 
+    /**
+     * Точка входа в приложение.
+     *
+     * @param args аргументы командной строки (не используются)
+     */
     public static void main(String[] args) {
-        new ru.nsu.aimykhelov.task112.BlackjackGame(1).start();
+        new BlackjackGame(1).start();
     }
 }

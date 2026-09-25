@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Колода карт. Может состоять из одной или нескольких стандартных
@@ -14,6 +13,12 @@ import java.util.Scanner;
 public class Deck {
     private final Deque<Card> cards = new ArrayDeque<>();
 
+    /**
+     * Создаёт и тасует колоду из заданного числа стандартных колод.
+     * Если число колод меньше единицы, используется одна колода.
+     *
+     * @param deckCount количество колод (минимум 1)
+     */
     public Deck(int deckCount) {
         if (deckCount < 1) {
             deckCount = 1;
@@ -30,6 +35,12 @@ public class Deck {
         cards.addAll(all);
     }
 
+    /**
+     * Извлекает верхнюю карту колоды.
+     *
+     * @return верхняя карта
+     * @throws IllegalStateException если колода пуста
+     */
     public Card draw() {
         if (cards.isEmpty()) {
             throw new IllegalStateException("Колода пуста");
@@ -37,6 +48,11 @@ public class Deck {
         return cards.pollFirst();
     }
 
+    /**
+     * Возвращает количество оставшихся карт.
+     *
+     * @return количество оставшихся карт
+     */
     public int size() {
         return cards.size();
     }

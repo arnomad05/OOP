@@ -24,19 +24,40 @@ public enum Rank {
     private final String rusName;
     private final int baseValue;
 
+    /**
+     * Создаёт номинал с заданным названием и очками.
+     *
+     * @param rusName   название номинала на русском языке
+     * @param baseValue базовое количество очков
+     */
     Rank(String rusName, int baseValue) {
         this.rusName = rusName;
         this.baseValue = baseValue;
     }
 
+    /**
+     * Возвращает русскоязычное название номинала.
+     *
+     * @return русскоязычное название номинала
+     */
     public String getRusName() {
         return rusName;
     }
 
+    /**
+     * Возвращает базовое количество очков.
+     *
+     * @return базовое количество очков
+     */
     public int getBaseValue() {
         return baseValue;
     }
 
+    /**
+     * Проверяет, является ли номинал тузом.
+     *
+     * @return {@code true}, если номинал — туз
+     */
     public boolean isAce() {
         return this == ACE;
     }

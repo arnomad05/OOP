@@ -7,10 +7,21 @@ import java.util.List;
  * со скрытой картой.
  */
 public class Dealer extends Participant {
+
+    /**
+     * Создаёт дилера с именем «Дилер».
+     */
     public Dealer() {
         super("Дилер");
     }
 
+    /**
+     * Формирует представление руки дилера до открытия закрытой карты:
+     * первая карта показывается как {@code <закрытая карта>},
+     * остальные — с номиналом и мастью.
+     *
+     * @return строковое представление руки со скрытой картой
+     */
     public String describeWithHidden() {
         StringBuilder sb = new StringBuilder("[<закрытая карта>, ");
         List<Card> cards = hand.getCards();
