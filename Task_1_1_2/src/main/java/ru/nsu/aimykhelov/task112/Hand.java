@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Рука участника: набор карт и правила подсчёта очков.
  */
-class Hand {
+public class Hand {
     private final List<Card> cards = new ArrayList<>();
 
     public void add(Card c) {

@@ -6,7 +6,7 @@ import java.util.List;
  * Дилер с собственными правилами поведения: умеет показывать руку
  * со скрытой картой.
  */
-class Dealer extends Participant {
+public class Dealer extends Participant {
     public Dealer() {
         super("Дилер");
     }

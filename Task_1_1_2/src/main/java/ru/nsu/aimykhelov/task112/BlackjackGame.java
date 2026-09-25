@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Основной класс игры: управляет раундами, вводом-выводом
  * и подсчётом побед игрока и дилера.
  */
-class BlackjackGame {
+public class BlackjackGame {
     private final Scanner scanner = new Scanner(System.in);
     private final Deck deck;
     private final Player player = new Player();

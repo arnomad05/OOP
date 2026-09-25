@@ -11,7 +11,7 @@ import java.util.Scanner;
  * Колода карт. Может состоять из одной или нескольких стандартных
  * колод по 52 карты. Карты тасуются при создании.
  */
-class Deck {
+public class Deck {
     private final Deque<Card> cards = new ArrayDeque<>();
 
     public Deck(int deckCount) {

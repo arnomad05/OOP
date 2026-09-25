@@ -6,7 +6,7 @@ package ru.nsu.aimykhelov.task112;
  * <p>Туз хранит значение 11; понижение до 1 выполняется в {@link Hand#getValue()},
  * поскольку решение зависит от всей руки, а не от отдельной карты.
  */
-enum Rank {
+public enum Rank {
     TWO("Двойка", 2),
     THREE("Тройка", 3),
     FOUR("Четверка", 4),

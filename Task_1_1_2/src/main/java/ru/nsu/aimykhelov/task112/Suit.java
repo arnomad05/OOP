@@ -3,7 +3,7 @@ package ru.nsu.aimykhelov.task112;
 /**
  * Масти игральных карт с русскоязычными названиями для вывода.
  */
-enum Suit {
+public enum Suit {
     SPADES("Пики"),
     HEARTS("Червы"),
     DIAMONDS("Бубны"),

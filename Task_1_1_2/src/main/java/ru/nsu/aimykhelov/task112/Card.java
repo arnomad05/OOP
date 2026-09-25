@@ -4,7 +4,7 @@ package ru.nsu.aimykhelov.task112;
  * Одна игральная карта. Неизменяемый объект: после создания
  * масть и номинал не могут быть изменены.
  */
-class Card {
+public class Card {
     private final Suit suit;
     private final Rank rank;
 
@@ -20,6 +20,8 @@ class Card {
     public boolean isAce() {
         return rank.isAce();
     }
+
+    public Rank getRank() {return rank; }
 
     @Override
     public String toString() {

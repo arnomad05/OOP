@@ -4,7 +4,7 @@ package ru.nsu.aimykhelov.task112;
  * Общая абстракция участника игры: имя и рука.
  * Наследники — {@link Player} и {@link Dealer}.
  */
-abstract class Participant {
+public abstract class Participant {
     protected final String name;
     protected final Hand hand = new Hand();
 
@@ -15,6 +15,8 @@ abstract class Participant {
     public Hand getHand() {
         return hand;
     }
+
+   public String getName() { return name; }
 
     public void resetHand() {
         hand.getCards().clear();
