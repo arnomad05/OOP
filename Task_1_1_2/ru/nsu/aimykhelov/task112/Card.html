@@ -91,7 +91,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.nsu.aimykhelov.task112.Suit,ru.nsu.aimykhelov.task112.Rank)" class="member-name-link">Card</a><wbr>(<a href="Suit.html" title="enum class in ru.nsu.aimykhelov.task112">Suit</a>&nbsp;suit,
  <a href="Rank.html" title="enum class in ru.nsu.aimykhelov.task112">Rank</a>&nbsp;rank)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Создаёт карту с заданными мастью и номиналом.</div>
+</div>
 </div>
 </section>
 </li>
@@ -140,6 +142,12 @@ loadScripts(document, 'script');</script>
 <h3>Card</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Card</span><wbr><span class="parameters">(<a href="Suit.html" title="enum class in ru.nsu.aimykhelov.task112">Suit</a>&nbsp;suit,
  <a href="Rank.html" title="enum class in ru.nsu.aimykhelov.task112">Rank</a>&nbsp;rank)</span></div>
+<div class="block">Создаёт карту с заданными мастью и номиналом.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>suit</code> - масть карты</dd>
+<dd><code>rank</code> - номинал карты</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -154,18 +162,30 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getBaseValue()">
 <h3>getBaseValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getBaseValue</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>базовое количество очков карты</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="isAce()">
 <h3>isAce</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isAce</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code>, если карта — туз</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getRank()">
 <h3>getRank</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Rank.html" title="enum class in ru.nsu.aimykhelov.task112">Rank</a></span>&nbsp;<span class="element-name">getRank</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>номинал карты</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -175,6 +195,8 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
+<dt>Returns:</dt>
+<dd>строковое представление вида <code>"Дама Пики"</code></dd>
 </dl>
 </section>
 </li>
