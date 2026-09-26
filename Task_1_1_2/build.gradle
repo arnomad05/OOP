@@ -2,18 +2,12 @@ plugins {
     id 'java'
     id 'application'
     id 'jacoco'
+    id 'checkstyle'
 }
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
-}
-
-test {
-    doFirst {
-        println "Test JVM: " + System.getProperty("java.version")
-        println "Test java.home: " + System.getProperty("java.home")
-    }
 }
 
 compileJava.options.encoding = 'UTF-8'
@@ -45,7 +39,7 @@ dependencies {
 }
 
 jacoco {
-    toolVersion = '0.8.11'
+    toolVersion = '0.8.14'
 }
 
 jacocoTestReport {
@@ -64,6 +58,12 @@ jacocoTestCoverageVerification {
             }
         }
     }
+}
+
+checkstyle {
+    toolVersion = '10.12.4'
+    configFile = file('.github/google_checks.xml')
+    ignoreFailures = true
 }
 
 check.dependsOn jacocoTestCoverageVerification
