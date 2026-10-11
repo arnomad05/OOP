@@ -82,7 +82,7 @@ public abstract class Expression {
             int num = Integer.parseInt(str);
             return new Number(num);
         } catch (NumberFormatException e) {
-
+            // Не число
         }
 
         int brackets = 0;
